@@ -9,7 +9,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
+set colorcolumn=80
 syntax on
+colorscheme blue
 set cursorline
 set hlsearch
 set incsearch
