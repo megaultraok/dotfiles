@@ -21,6 +21,7 @@ set smartcase
 set encoding=utf-8
 set title
 set confirm
+set mouse=a
 
 " PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
