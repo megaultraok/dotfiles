@@ -1,6 +1,6 @@
 " EDITOR
 set nocompatible
-set number relativenumber
+set number
 set wrap
 set linebreak
 set autoindent
@@ -23,6 +23,10 @@ set title
 set confirm
 set mouse=a
 
+
+au InsertEnter * silent execute "!echo -en \<esc>[5 q"
+au InsertLeave * silent execute "!echo -en \<esc>[1 q"
+
 " PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -30,6 +34,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
@@ -42,14 +48,8 @@ inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+inoremap {<CR> {<CR>}<Esc>ko<tab>
 noremap <C-n> :NERDTree<CR>
 noremap <C-t> :NERDTreeToggle<CR>
 noremap <C-f> :NERDTreeFind<CR>
-
-" POWERLINE
-"set rtp+=/Users/jada/Library/Python/3.9/lib/python/site-packages/powerline/bindings/vim
-"set laststatus=2
-"set t_Co=256
+noremap <space> za
