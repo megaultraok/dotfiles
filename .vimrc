@@ -23,6 +23,7 @@ set title
 set confirm
 set mouse=a
 
+let g:airline_theme='papercolor'
 
 au InsertEnter * silent execute "!echo -en \<esc>[5 q"
 au InsertLeave * silent execute "!echo -en \<esc>[1 q"
