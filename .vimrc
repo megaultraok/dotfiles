@@ -23,21 +23,28 @@ set title
 set confirm
 set mouse=a
 
-" TERMINAL -- original found on https://vi.stackexchange.com/questions/21881/toggle-terminal-buffer-vimscript-function
-let g:toggle_term = "<C-j>"
+let mapleader = "'"
 
+" TERMINAL -- original found on https://vi.stackexchange.com/questions/21881/toggle-terminal-buffer-vimscript-function
 let s:term_buf_nr = -1
-function! ToggleTerminal()
+function! s:ToggleTerminal() abort
     if s:term_buf_nr == -1
         execute "bo 11new | setlocal winfixheight | term ++curwin"
         let s:term_buf_nr = bufnr("$")
     else
-        execute "bd! " .s:term_buf_nr
+        try
+            execute "bdelete! " . s:term_buf_nr
+        catch
+            let s:term_buf_nr = -1
+            call <SID>ToggleTerminal()
+            return
+        endtry
         let s:term_buf_nr = -1
     endif
 endfunction
 
-execute "nnoremap <silent>".g:toggle_term ." <C-w>:call ToggleTerminal()<CR>"
+nnoremap <silent> <Leader>t :call <SID>ToggleTerminal()<CR>
+tnoremap <silent> <Leader>t <C-w>N:call <SID>ToggleTerminal()<CR>
 
 " VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
