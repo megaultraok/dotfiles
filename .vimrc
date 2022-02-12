@@ -10,6 +10,8 @@ set linebreak
 set autoindent
 filetype off
 set ruler
+set colorcolumn=80
+set cursorline
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -55,6 +57,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'alvan/vim-closetag'
 Plugin 'turbio/bracey.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdtree'
+Plugin 'machakann/vim-highlightedyank'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,6 +68,12 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap {<CR> {<CR>}<Esc>ko<tab>
+
+" REMAPPING SHORTCUTS
+nnoremap <leader>y "*y
+nnoremap <leader>p "*p
+nnoremap <leader>nh :noh<CR>
+nnoremap <leader>d :NERDTreeToggle<CR>
 
 " VIM-CLOSETAG
 " filenames like *.xml, *.html, *.xhtml, ...
