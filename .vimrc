@@ -4,7 +4,7 @@ set background=light
 colorscheme solarized
 
 set nocompatible
-set number
+set number relativenumber
 set wrap
 set linebreak
 set autoindent
