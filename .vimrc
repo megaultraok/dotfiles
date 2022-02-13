@@ -59,6 +59,7 @@ Plugin 'turbio/bracey.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 filetype plugin indent on
