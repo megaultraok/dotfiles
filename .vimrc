@@ -1,7 +1,5 @@
-let g:solarized_termcolors=256
 syntax on
-set background=light
-colorscheme solarized
+colorscheme Tomorrow-Night-Blue
 
 set nocompatible
 set number relativenumber
@@ -75,6 +73,11 @@ nnoremap <leader>y "*y
 nnoremap <leader>p "*p
 nnoremap <leader>nh :noh<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
+
+" YOUCOMPLETEME
+let g:ymc_autoclose_preview_window_after_completion=1
+let g:ycm_auto_hover=''
+nmap <leader>H <plug>(YCMHover)
 
 " VIM-CLOSETAG
 " filenames like *.xml, *.html, *.xhtml, ...
