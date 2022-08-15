@@ -62,6 +62,10 @@ Plugin 'valloric/youcompleteme'
 call vundle#end()
 filetype plugin indent on
 
+" NERDTREE
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
