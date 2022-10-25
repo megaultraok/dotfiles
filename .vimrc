@@ -1,5 +1,7 @@
 syntax on
-colorscheme Tomorrow-Night-Blue
+set termguicolors
+set background=light
+colorscheme PaperColor
 
 set nocompatible
 set number relativenumber
@@ -58,6 +60,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'valloric/youcompleteme'
+Plugin 'severin-lemaignan/vim-minimap'
 
 call vundle#end()
 filetype plugin indent on
@@ -82,6 +85,9 @@ nnoremap <leader>d :NERDTreeToggle<CR>
 let g:ymc_autoclose_preview_window_after_completion=1
 let g:ycm_auto_hover=''
 nmap <leader>H <plug>(YCMHover)
+
+" VIM-MINIMAP
+let g:minimap_toggle = '<leader>mt'
 
 " VIM-CLOSETAG
 " filenames like *.xml, *.html, *.xhtml, ...
