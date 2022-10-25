@@ -87,7 +87,7 @@ let g:ycm_auto_hover=''
 nmap <leader>H <plug>(YCMHover)
 
 " VIM-MINIMAP
-let g:minimap_toggle = '<leader>mm'
+let g:minimap_toggle = '<leader>m'
 
 " VIM-CLOSETAG
 " filenames like *.xml, *.html, *.xhtml, ...
