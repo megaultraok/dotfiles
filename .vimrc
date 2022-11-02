@@ -1,4 +1,5 @@
 syntax on
+set guifont=Monospace\ 12
 set termguicolors
 set background=light
 colorscheme PaperColor
@@ -61,6 +62,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'valloric/youcompleteme'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()
 filetype plugin indent on
@@ -79,7 +81,7 @@ inoremap {<CR> {<CR>}<Esc>ko<tab>
 nnoremap <leader>y "*y
 nnoremap <leader>p "*p
 nnoremap <leader>nh :noh<CR>
-nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>d :NERDTreeTabsToggle<CR>
 
 " YOUCOMPLETEME
 let g:ymc_autoclose_preview_window_after_completion=1
